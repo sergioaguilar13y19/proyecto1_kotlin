@@ -11,7 +11,15 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
         val fresa = Fruit(10.5, "Fresa")
+        val sandia = Fruit(30.0,"sandia")
+        val durazno = Fruit(8.5,"durazno")
+        val melon = Fruit(20.2,"melon")
+        val uva = Fruit(8.2,"uva")
+        val kiwi = Fruit(15.8,"kiwi")
+        val coco = Fruit(26.4,"coco")
+        
         fresa.id = "1"
         fresa.addStock(10)
         fresa.calidad = "Buena"
@@ -25,12 +33,17 @@ class MainActivity : AppCompatActivity() {
         binding.tvMedida.text = fresa.unidadMedida
         binding.tvEstacion.text = fresa.estacion
         binding.tvPrecioOferta.text = fresa.precioOferta.toString()
+
         //functions
-        //binding.tvNombre.text = "El pollo loco"
         binding.btnVender.setOnClickListener {
-            fresa.addStock(10)
+            var cantidad = binding.tiVender.editableText.toString()
+            fresa.vender(cantidad.toInt())
             binding.tvStock.text = fresa.stock.toString()
-            //binding.tvNombre.text = "El pollo loco"
+        }
+        binding.btnAddStock.setOnClickListener{
+            var cantidad = binding.tiAdd.editableText.toString()
+            fresa.addStock(cantidad.toInt())
+            binding.tvStock.text = fresa.stock.toString()
         }
     }
 

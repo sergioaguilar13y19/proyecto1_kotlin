@@ -124,8 +124,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="74dp"
+        android:layout_marginTop="78dp"
+        android:layout_marginEnd="72dp"
         android:text="&quot;&quot;"
+        app:layout_constraintEnd_toStartOf="@+id/textView4"
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -225,23 +227,16 @@
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <TextView
-        android:id="@+id/textView14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="20dp"
-        android:text="Medida:"
-        app:layout_constraintStart_toEndOf="@+id/tv_estacion"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
-
-    <TextView
         android:id="@+id/tv_medida"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toEndOf="@+id/textView14"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="123dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_precio"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_stock2"
@@ -304,23 +299,78 @@
         app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
     <Button
-        android:id="@+id/btn_vender"
-        android:layout_width="105dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="24dp"
-        android:text="Vender"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
-
-    <Button
         android:id="@+id/btn_add_stock"
         android:layout_width="116dp"
         android:layout_height="39dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="4dp"
         android:text="Añadir Stock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
         app:layout_constraintStart_toEndOf="@+id/btn_vender"
+        app:layout_constraintTop_toBottomOf="@+id/ti_add" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/ti_add"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="10dp"
+        android:singleLine="true"
+        app:layout_constraintBottom_toTopOf="@+id/btn_add_stock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ti_vender"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cantidad_vender"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btn_vender"
+        android:layout_width="105dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
+        android:text="Vender"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ti_vender" />
+
+    <TextView
+        android:id="@+id/tv_cantidad_vender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="10dp"
+        android:text="Cantidad"
+        app:layout_constraintBottom_toTopOf="@+id/ti_vender"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/ti_vender"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="8dp"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btn_vender"
+        app:layout_constraintEnd_toStartOf="@+id/ti_add"
+        app:layout_constraintHorizontal_bias="0.025"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cantidad_vender" />
+
+    <TextView
+        android:id="@+id/tv_cantidad_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="126dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="107dp"
+        android:text="Cantidad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_cantidad_vender"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
