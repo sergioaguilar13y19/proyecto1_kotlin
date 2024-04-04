@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         val melon = Fruit(20.2,"melon")
         val uva = Fruit(8.2,"uva")
         val kiwi = Fruit(15.8,"kiwi")
-        val coco = Fruit(26.4,"coco")
+        val naranja = Fruit(26.4,"naranja")
         
         fresa.id = "1"
         fresa.addStock(10)
