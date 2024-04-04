@@ -9,6 +9,10 @@ class Fruit(var precio: Double, var nombre: String) {
     var unidadMedida = ""
 
     fun addStock(cantidad: Int) {
+        if (cantidad < 1){
+            println("Por favor seleccioan una cantidad valida")
+            return
+        }
         stock += cantidad
     }
 

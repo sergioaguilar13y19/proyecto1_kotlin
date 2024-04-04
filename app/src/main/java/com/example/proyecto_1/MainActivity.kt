@@ -26,11 +26,12 @@ class MainActivity : AppCompatActivity() {
         binding.tvEstacion.text = fresa.estacion
         binding.tvPrecioOferta.text = fresa.precioOferta.toString()
         //functions
-        binding.btnVender.setOnClickListener( {
-            fresa.addStock(2)
+        //binding.tvNombre.text = "El pollo loco"
+        binding.btnVender.setOnClickListener {
+            fresa.addStock(10)
             binding.tvStock.text = fresa.stock.toString()
             //binding.tvNombre.text = "El pollo loco"
-        })
+        }
     }
 
 }
